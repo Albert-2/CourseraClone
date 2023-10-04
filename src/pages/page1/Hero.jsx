@@ -52,6 +52,11 @@ import Darth from "./assets/institutes/DarthInst.png";
 import DarthLogo from "./assets/institutes/smallDarth.png";
 import Illinois2 from "./assets/institutes/Illinois2Inst.png";
 import Illinois2Logo from "./assets/institutes/smallIllinois.png";
+import Explore1 from "./assets/ExplrCourse1.jpg";
+import Explore2 from "./assets/ExplrCourse2.jpg";
+import Explore3 from "./assets/ExplrCourse3.jpg";
+import Explore4 from "./assets/ExplrCourse4.jpg";
+import ThreeImg from "./assets/ThreeImg.png";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -710,6 +715,63 @@ const Hero = () => {
       ],
     },
   ];
+  const courseList = [
+    {
+      name: "Data Science",
+      courses: 425,
+      icon: Explore1,
+    },
+    {
+      name: "Business",
+      courses: 1095,
+      icon: Explore4,
+    },
+    {
+      name: "Computer Science",
+      courses: 668,
+      icon: Explore3,
+    },
+    {
+      name: "Health",
+      courses: 471,
+      icon: Explore1,
+    },
+    {
+      name: "Social Sciences",
+      courses: 401,
+      icon: Explore2,
+    },
+    {
+      name: "Personal Development",
+      courses: 127,
+      icon: Explore3,
+    },
+    {
+      name: "Arts and Humanities",
+      courses: 338,
+      icon: Explore1,
+    },
+    {
+      name: "Physical Science and Engineering",
+      courses: 413,
+      icon: Explore4,
+    },
+    {
+      name: "Language and Learning",
+      courses: 150,
+      icon: Explore3,
+    },
+    {
+      name: "Informatioin Technology",
+      courses: 145,
+      icon: Explore2,
+    },
+    {
+      name: "Maths and Logic",
+      courses: 70,
+      icon: Explore4,
+    },
+  ];
   return (
     <>
       <Navbar />
@@ -761,13 +823,50 @@ const Hero = () => {
           ))}
         </ul>
         <CareerModal info={content[index]} />
-      </div>
-      <div>
+        {/* </div>
+      <div> */}
         {programs.map((prog, progIndex) => (
-          <div className="py-6" key={progIndex}>
-            <DegPrgm prog={prog} />
-          </div>
+          <MyContext.Provider value={prog} key={progIndex}>
+            <div className="py-6">
+              <DegPrgm />
+            </div>
+          </MyContext.Provider>
         ))}
+        {/* </div>
+      <div> */}
+        <h1 className="sm:text-4xl text-2xl font-semibold mb-6 tracking-wider">
+          Explore Coursera
+        </h1>
+        <div className="flex items-start justify-start flex-wrap gap-6">
+          {courseList.map((item, itemIndex) => (
+            <div className="flex items-center border-2 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:min-w-[300px] min-w-full flex-1 gap-4">
+              <img src={item.icon} alt="explore" className="w-20 h-20" />
+              <div className="text-sm">
+                <h1 className="font-bold">{item.name}</h1>
+                <p>{item.courses} courses</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className=" sm:py-40 py-20">
+        <div className="bg-blue-100 xl:h-[600px] h-fit flex items-center justify-center xl:flex-row flex-col gap-6 sm:px-24 px-4 ">
+          <img src={ThreeImg} alt="images" className="flex-1 xl:w-[600px] max-w[400px]" />
+          <div className="text-lg  flex-1 w-full space-y-6 pb-10">
+            <h1 className="lg:text-5xl text-3xl">Learner outcomes on Coursera</h1>
+            <p className="tracking-wider sm:text-lg text-sm">
+              <span className="font-bold">87% of people learning</span> for
+              professional development{" "}
+              <span className="font-bold">report career benefits,</span>{" "}
+              including outcomes like getting a promotion, becoming better at
+              their current job, and finding a new job.{" "}
+              <u className="text-blue-700">Coursera Impact Report (2020)</u>
+            </p>
+            <button className="md:w-auto w-2/3  py-3 px-8 text-white bg-blue-700 font-semibold rounded-md">
+              Join for free
+            </button>
+          </div>
+        </div>
       </div>
     </>
   );
