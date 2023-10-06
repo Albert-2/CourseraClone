@@ -11,7 +11,7 @@ import Stanford from "../assets/stanford.png";
 const Advtsng = () => {
   return (
     <div className="text-center bg-[#f3f3f3] py-20 space-y-8">
-      <h2 className="font-bold text-xl">
+      <h2 className="font-bold text-2xl tracking-wide">
         We collaborate with{" "}
         <span className="text-blue-700">
           300+ leading universities and companies

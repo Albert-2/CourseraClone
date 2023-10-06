@@ -7,7 +7,7 @@ const Navbar = () => {
     setHidden(!hidden);
   };
   return (
-    <>
+    <div className="sticky top-0 bg-white py-2">
       <div className="lg:block hidden">
         <div className="flex items-center justify-between py-2 px-6">
           <div className="flex items-center justify-between space-x-3">
@@ -43,7 +43,7 @@ const Navbar = () => {
           <i className="fa-solid fa-magnifying-glass fa-lg"></i>
         </div>
         {hidden && (
-          <div className="absolute top-20 bg-white z-10 w-full">
+          <div className="absolute top-full bg-white z-10 w-full">
             <ul className="overflow-scroll h-[80vh]">
               <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
                 <li>For Business</li>
@@ -88,50 +88,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-      {/* <div>
-        <ul className="overflow-scroll h-[80vh]">
-          <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-            <li>For Business</li>
-            <li>For Business</li>
-            <li>For Business</li>
-            <li>For Business</li>
-            <li>For Business</li>
-          </ul>
-          <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-            <li className="font-bold">Goals</li>
-            <li>Take a free course</li>
-            <li>Take a free course</li>
-            <li>Take a free course</li>
-          </ul>
-          <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-            <li className="font-bold">Subjects</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-            <li>Data Science</li>
-          </ul>
-          <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-            <li>Browse all subjects</li>
-          </ul>
-        </ul>
-        <ul className="flex flex-col justify-center p-4 space-y-2">
-          <button className="flex-1 p-4 text-white bg-blue-700 font-semibold">
-            Join for free
-          </button>
-          <button className="flex-1 p-4 border-2 border-blue-700 text-blue-700 font-semibold">
-            Log In
-          </button>
-        </ul>
-      </div> */}
-    </>
+    </div>
   );
 };
 

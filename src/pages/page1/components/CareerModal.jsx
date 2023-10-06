@@ -54,7 +54,7 @@ const CareerModal = (props) => {
           </div>
         </div>
       </div>
-      <div className=" 2xl:hidden flex  items-center justify-center md:flex-row flex-col md:text-left text-center gap-4 py-6 lg:border-b-0 border-b-2 ">
+      <div className=" 2xl:hidden flex  items-center justify-center md:flex-row flex-col md:text-left text-center gap-4 py-6 ">
         <img
           src={props.info.userIcon}
           alt="feedback"

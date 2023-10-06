@@ -57,6 +57,23 @@ import Explore2 from "./assets/ExplrCourse2.jpg";
 import Explore3 from "./assets/ExplrCourse3.jpg";
 import Explore4 from "./assets/ExplrCourse4.jpg";
 import ThreeImg from "./assets/ThreeImg.png";
+import FeedBack1 from "./assets/FeedBack1.png";
+import FeedBack2 from "./assets/FeedBack2.png";
+import FeedBack3 from "./assets/FeedBack3.png";
+import companyLogo1 from "./assets/companyLogos/Comp1.png";
+import companyLogo2 from "./assets/companyLogos/Comp2.png";
+import companyLogo3 from "./assets/companyLogos/Comp3.png";
+import companyLogo4 from "./assets/companyLogos/Comp4.png";
+import companyLogo5 from "./assets/companyLogos/Comp5.png";
+import companyLogo6 from "./assets/companyLogos/Comp6.png";
+import companyLogo7 from "./assets/companyLogos/Comp7.png";
+import companyLogo8 from "./assets/companyLogos/Comp8.png";
+import companyLogo9 from "./assets/companyLogos/Comp9.png";
+import LastImg from "./assets/LastImg.png";
+import Footer from "./components/Footer.jsx";
+import Footer1 from "./assets/FooterAsst/Footer1.png";
+import Footer2 from "./assets/FooterAsst/Footer2.png";
+import Footer3 from "./assets/FooterAsst/Footer3.png";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -772,6 +789,147 @@ const Hero = () => {
       icon: Explore4,
     },
   ];
+  const company = [
+    companyLogo1,
+    companyLogo2,
+    companyLogo3,
+    companyLogo4,
+    companyLogo5,
+    companyLogo6,
+    companyLogo7,
+    companyLogo8,
+    companyLogo9,
+  ];
+  const feedBack = [
+    {
+      userIcon: FeedBack1,
+      userName: "Chitranshee A.",
+      userCountry: "India",
+      feedBack:
+        "“Even more important than knowledge is confidence, which I have gained through my learning journey. No matter what you are looking to learn, or gain confidence in, Coursera has something for you.”",
+    },
+    {
+      userIcon: FeedBack2,
+      userName: "Carlos C.",
+      userCountry: "United States",
+      feedBack:
+        "“Earning my IT certificates helped me demonstrate my knowledge to recruiters and enhanced my standing as an applicant. Now, I love my new job in the tech industry; technology is always evolving, and I continue to learn something every day.”",
+    },
+    {
+      userIcon: FeedBack3,
+      userName: "Anisa R.",
+      userCountry: "United States",
+      feedBack:
+        "“The program totally changed my life. I have this career in front of me now that wasn’t even in sight before, and it’s what I want to be doing. That’s really powerful.”",
+    },
+  ];
+  const footerData = [
+    [
+      [
+        "New & Trending",
+        "New Courses",
+        "Free Courses",
+        "Learn Artificial Intelligence",
+        "Learn ChatGPT",
+        "Learn Cyber Security",
+        "Learn Data Science",
+        "Learn Excel",
+        "Learn Generative AI with Large Language Models",
+        "Learn Prompt Engineering For Chatgpt",
+        "Learn Python",
+      ],
+      [
+        "Popular Skills",
+        "Learn Computer Science",
+        "Learn Data Analysis",
+        "Learn Digital Marketing",
+        "Learn Information Technology",
+        "Learn English",
+        "Learn Machine Learning",
+        "Learn Power Bi",
+        "Learn Product Management",
+        "Learn Project Management",
+        "Learn Web Development",
+      ],
+      [
+        "Popular Career Certificates",
+        "Google Advanced Data Analytics Professional Certificate",
+        "Google Business Intelligence Professional Certificate",
+        "Google Cybersecurity Professional Certificate",
+        "Google Data Analytics Professional Certificate",
+        "Google Digital Marketing & E-commerce Professional Certificate",
+        "IBM AI Engineering Professional Certificate",
+        "IBM Data Analyst Professional Certificate",
+        "Machine Learning Specialization",
+        "Meta Back-End Developer Professional Certificate",
+        "Meta Front-End Developer Professional Certificate",
+      ],
+      [
+        "Popular Career Articles",
+        "Examples of Strengths and Weaknesses for Job Interviews",
+        "High-Income Skills Worth Learning",
+        "How to Announce Your New Job on LinkedIn",
+        "How to Ask for a Letter of Recommendation",
+        "How to Write a Letter of Recommendation",
+        "How to Write an Eye-Catching Job Application Email",
+        "Popular Cybersecurity Certifications",
+        "The 4 Ps of Marketing",
+        "What Are Professional Development Goals",
+        "What Does a Data Analyst Do",
+      ],
+    ],
+    [
+      [
+        "Coursera",
+        "About",
+        "What We Offer",
+        "Leadership",
+        "Careers",
+        "Catalog",
+        "Coursera Plus",
+        "Professional Certificates",
+        "MasterTrack® Certificates",
+        "Degrees",
+        "For Enterprise",
+        "For Government",
+        "For Campus",
+        "Become a Partner",
+        "Coronavirus Response",
+        "Free Courses",
+        "All Courses",
+      ],
+      [
+        "Community",
+        "Learners",
+        "Partners",
+        "Beta Testers",
+        "Translators",
+        "Blog",
+        "Tech Blog",
+        "Teaching Center",
+      ],
+      [
+        "More",
+        "Press",
+        "Investors",
+        "Terms",
+        "Privacy",
+        "Help",
+        "Accessibility",
+        "Contact",
+        "Articles",
+        "Directory",
+        "Affiliates",
+        "Modern Slavery Statement",
+        "Do Not Sell/Share",
+      ],
+      [
+        <img src={Footer1} alt="icon" className="mb-10 " />,
+        <img src={Footer2} alt="icon" className="mb-10 " />,
+        <img src={Footer3} alt="icon" className="sm:mb-10 mb-0" />,
+      ],
+    ],
+  ];
   return (
     <>
       <Navbar />
@@ -823,8 +981,6 @@ const Hero = () => {
           ))}
         </ul>
         <CareerModal info={content[index]} />
-        {/* </div>
-      <div> */}
         {programs.map((prog, progIndex) => (
           <MyContext.Provider value={prog} key={progIndex}>
             <div className="py-6">
@@ -832,14 +988,15 @@ const Hero = () => {
             </div>
           </MyContext.Provider>
         ))}
-        {/* </div>
-      <div> */}
         <h1 className="sm:text-4xl text-2xl font-semibold mb-6 tracking-wider">
           Explore Coursera
         </h1>
         <div className="flex items-start justify-start flex-wrap gap-6">
           {courseList.map((item, itemIndex) => (
-            <div className="flex items-center border-2 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:min-w-[300px] min-w-full flex-1 gap-4">
+            <div
+              className="flex items-center border-2 shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] sm:min-w-[300px] min-w-full flex-1 gap-4"
+              key={itemIndex}
+            >
               <img src={item.icon} alt="explore" className="w-20 h-20" />
               <div className="text-sm">
                 <h1 className="font-bold">{item.name}</h1>
@@ -849,11 +1006,17 @@ const Hero = () => {
           ))}
         </div>
       </div>
-      <div className=" sm:py-40 py-20">
+      <div className="sm:py-40 py-20">
         <div className="bg-blue-100 xl:h-[600px] h-fit flex items-center justify-center xl:flex-row flex-col gap-6 sm:px-24 px-4 ">
-          <img src={ThreeImg} alt="images" className="flex-1 xl:w-[600px] max-w[400px]" />
+          <img
+            src={ThreeImg}
+            alt="images"
+            className="flex-1 xl:w-[600px] max-w[400px]"
+          />
           <div className="text-lg  flex-1 w-full space-y-6 pb-10">
-            <h1 className="lg:text-5xl text-3xl">Learner outcomes on Coursera</h1>
+            <h1 className="lg:text-5xl text-3xl">
+              Learner outcomes on Coursera
+            </h1>
             <p className="tracking-wider sm:text-lg text-sm">
               <span className="font-bold">87% of people learning</span> for
               professional development{" "}
@@ -867,6 +1030,80 @@ const Hero = () => {
             </button>
           </div>
         </div>
+      </div>
+      <div className="container m-auto py-10 flex items-center justify-center flex-col space-y-6 text-center">
+        <div className="flex items-center space-y-4 flex-col">
+          <h1 className="font-semibold text-4xl ">
+            From the Coursera community
+          </h1>
+          <p className="text-2xl ">
+            124+ million people have already joined Coursera
+          </p>
+        </div>
+        <div className="flex gap-6 items-stretch justify-start overflow-scroll  w-full">
+          {feedBack.map((fb, indexFb) => (
+            <div
+              className="flex flex-col items-center justify-start space-y-4   sm:min-w-[300px] min-w-full "
+              key={indexFb}
+            >
+              <img src={fb.userIcon} alt="image" className="w-48" />
+              <h1 className="text-blue-900 font-bold text-lg">{fb.userName}</h1>
+              <p className="border-b-2 border-blue-900 px-6 py-2">
+                {fb.userCountry}
+              </p>
+              <p className="text-lg text-center  px-10">{fb.feedBack}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="bg-[#f3f3f3] sm:py-20 py-10">
+        <div className="container m-auto flex items-stretch justify-center lg:flex-row flex-col gap-6 px-10">
+          <div className="flex flex-col items-start justify-center space-y-6  flex-1">
+            <h1 className="font-bold text-3xl">
+              The ideal solution for your business
+            </h1>
+            <p className="text-sm">
+              Get the world-class learning and development chosen by top
+              organizations across the globe. All on Coursera for Business.
+            </p>
+            <button className="md:w-auto w-full py-3 px-8 text-white bg-blue-700 font-bold rounded-md">
+              Discover Coursera for Business
+            </button>
+            <p className="text-sm">
+              Upskill a small team?{" "}
+              <u className="text-blue-700">Check out Coursera for Teams</u>
+            </p>
+          </div>
+          <div className="grid grid-cols-3 grid-rows-3 text-center flex-1 gap-6 py-6">
+            {company.map((logo, logoIndex) => (
+              <img
+                src={logo}
+                alt="logo"
+                key={logoIndex}
+                className="m-auto py-4"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto flex lg:items-center items-start justify-center lg:flex-row flex-col sm:p-20 p-6 sm:gap-16 gap-6 my-14">
+        <img src={LastImg} alt="image" />
+        <div className="flex flex-col items-start justify-center space-y-4 lg:w-1/3 w-auto">
+          <h1 className="font-bold leading-tight lg:text-5xl text-3xl">
+            Take the next step toward your personal and professional goals with
+            Coursera.
+          </h1>
+          <p>
+            Join now to receive personalized recommendations from the full
+            Coursera catalog.
+          </p>
+          <button className="sm:w-auto w-full  py-3 px-8 text-white bg-blue-700 font-bold rounded-md">
+            Join for free
+          </button>
+        </div>
+      </div>
+      <div className="bg-[#f3f3f3] sm:py-20 py-10">
+        <Footer data={footerData} />
       </div>
     </>
   );
