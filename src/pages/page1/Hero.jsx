@@ -74,6 +74,7 @@ import Footer from "./components/Footer.jsx";
 import Footer1 from "./assets/FooterAsst/Footer1.png";
 import Footer2 from "./assets/FooterAsst/Footer2.png";
 import Footer3 from "./assets/FooterAsst/Footer3.png";
+import BusinsCard from "../globalCompo/BusinsCard.jsx";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
