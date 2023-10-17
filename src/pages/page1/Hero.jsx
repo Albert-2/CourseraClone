@@ -984,7 +984,7 @@ const Hero = () => {
         <CareerModal info={content[index]} />
         {programs.map((prog, progIndex) => (
           <MyContext.Provider value={prog} key={progIndex}>
-            <div className="py-6">
+            <div className="py-6 ">
               <DegPrgm />
             </div>
           </MyContext.Provider>
