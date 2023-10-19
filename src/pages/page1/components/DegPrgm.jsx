@@ -1,5 +1,5 @@
 import React from "react";
-import Prgms from "./Prgms";
+import Prgms from "../../globalCompo/Prgms";
 import MyCont from "../../MyCont";
 import { useContext } from "react";
 
@@ -17,7 +17,9 @@ const DegPrgm = () => {
           <Prgms detail={card} key={cardIndex} />
         ))}
       </div>
-      <p className="text-blue-700 sm:font-semibold font-bold text-sm text-center pt-10">Explore Free Courses</p>
+      <p className="text-blue-700 sm:font-semibold font-bold text-sm text-center pt-10">
+        Explore Free Courses
+      </p>
     </div>
   );
 };

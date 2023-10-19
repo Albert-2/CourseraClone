@@ -27,7 +27,7 @@ import GoogleIcon from "./assets/smallGoogle.png";
 import IBMIcon from "./assets/smallIBM.png";
 import MetaIcon from "./assets/smallMeta.png";
 import IntuitIcon from "./assets/smallIntuit.png";
-import DegPrgm from "./components/DegPrgm";
+import DegPrgm from "./components/DegPrgm.jsx";
 import Birla from "./assets/institutes/BirlaInst.png";
 import BirlaLogo from "./assets/institutes/smallBirla.png";
 import Jain from "./assets/institutes/JainInst.jpg";

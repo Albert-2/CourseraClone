@@ -2,12 +2,12 @@ import React from "react";
 
 const GlobHero = (props) => {
   return (
-    <div className="relative border-2 border-black">
+    <div className="relative">
       <div className="bg-[#f3f3f3] flex sm:h-[80vh] relative">
         <div className="flex h-full sm:flex-row flex-col items-stretch justify-center m-auto 2xl:px-60 md:gap-6">
-          <div className="sm:space-y-20 space-y-8 overflow-y-scroll flex flex-col  sm:w-[50%] w-full py-10 px-4">
+          <div className="sm:space-y-20 space-y-8 overflow-y-scroll flex flex-col sm:w-[50%] w-full py-10 px-4">
             <div className="  items-center justify-start flex-col space-y-6">
-              <h1 className="font-bold md:text-6xl text-4xl break-words">
+              <h1 className="font-bold md:text-6xl text-3xl break-words">
                 {props.heroInfo.head}
               </h1>
               {props.heroInfo.list ? (
