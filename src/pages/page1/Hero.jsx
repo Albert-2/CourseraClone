@@ -71,9 +71,9 @@ import companyLogo8 from "./assets/companyLogos/Comp8.png";
 import companyLogo9 from "./assets/companyLogos/Comp9.png";
 import LastImg from "./assets/LastImg.png";
 import Footer from "./components/Footer.jsx";
-import Footer1 from "./assets/FooterAsst/Footer1.png";
-import Footer2 from "./assets/FooterAsst/Footer2.png";
-import Footer3 from "./assets/FooterAsst/Footer3.png";
+import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
+import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
+import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BusinsCard from "../globalCompo/BusinsCard.jsx";
 
 const Hero = () => {

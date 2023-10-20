@@ -5,9 +5,9 @@ const BusinsCard2 = (props) => {
   return (
     <>
       <div
-        className={`flex md:${dictn} flex-col items-center justify-center gap-6 container m-auto sm:px-10 sm:py-14 px-2 py-10`}
+        className={`flex md:${dictn} flex-col items-center justify-center gap-6 container m-auto sm:px-10 sm:py-14 px-4 py-10 `}
       >
-        <div className="flex flex-col items-start justify-center space-y-6 md:w-1/2 px-4">
+        <div className="flex flex-col items-start justify-center space-y-6 md:w-1/2 sm:px-8">
           <h4 className="font-semibold text-lg">{props.content.heading}</h4>
           <h2 className="text-4xl font-bold">{props.content.subHead}</h2>
           <p className="text-xl">{props.content.listHead}</p>
@@ -29,8 +29,12 @@ const BusinsCard2 = (props) => {
           {props.content.feedback && (
             <>
               <p className="text-2xl">{props.content.feedback}</p>
-              <div className="flex items-center justify-center gap-6">
-                <img src={props.content.compLogo} alt="icon" />
+              <div className="flex items-center justify-start gap-6 ">
+                <img
+                  src={props.content.compLogo}
+                  alt="icon"
+                  className="w-1/5 "
+                />
                 <div>
                   <h6 className="font-bold">{props.content.compEmp}</h6>
                   <p>{props.content.compName}</p>
@@ -51,7 +55,7 @@ const BusinsCard2 = (props) => {
               src="https://videos.ctfassets.net/2pudprfttvy6/6b2EfyipwGqDqpB8zqJPDH/f9bb19fd48c78afff047e809b4b73c2d/courseramicrocred_09may23__720p_.mp4"
               typeof="video/mp4"
               controls
-              className="w-4/5 m-auto cursor-pointer hover:brightness-75"
+              className="md:w-4/5 m-auto cursor-pointer hover:brightness-75"
               poster={props.content.CoverImage}
             ></video>
           )}

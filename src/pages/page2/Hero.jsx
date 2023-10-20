@@ -16,13 +16,22 @@ import companyLogo7 from "../page1/assets/companyLogos/Comp7.png";
 import companyLogo8 from "../page1/assets/companyLogos/Comp8.png";
 import companyLogo9 from "../page1/assets/companyLogos/Comp9.png";
 import DemandSkills from "./assets/InDemandSkills.png";
-import ClgCollage from "../page3//assets/university-collage.png";
+import hiringImg from "./assets/hiring-solutions-hero1.jpg";
+import skillDashBoard from "./assets/SkillsDashboard.png";
+import ClgCollage from "../page3/assets/university-collage.png";
+import compLogo3 from "../page2/assets/PricewaterhouseCoopers_Logo.svg";
+import compLogo4 from "../page2/assets/adobe-logo.svg";
 import Prgm1 from "./assets/academics/academy_leadership_hero.jpg";
 import Prgm2 from "./assets/academics/tech.jpg";
 import Prgm3 from "./assets/academics/Data_and_Analytics.jpg";
 import Prgm4 from "./assets/academics/marketing.jpg";
 import Prgm5 from "./assets/academics/finance.jpg";
 import Prgm6 from "./assets/academics/career.jpg";
+import Footer from "../page1/components/Footer";
+import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
+import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
+import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
+import BlkBanner from "../globalCompo/BlkBanner";
 
 const Hero = () => {
   const navBar = {
@@ -78,7 +87,7 @@ const Hero = () => {
       companyLogo9,
     ],
   };
-  const content = [
+  const cardContent1 = [
     {
       mainImg: DemandSkills,
       heading: "UPSKILL EMPLOYEES",
@@ -114,6 +123,46 @@ const Hero = () => {
       button: "Explore word-class content",
     },
   ];
+  const cardContent2 = [
+    {
+      mainImg: skillDashBoard,
+      heading: "SHOW ROI",
+      subHead: "Demonstrate the value of learning",
+      listHead:
+        "Use comprehensive metrics and insights to inform, measure, and assess your talent development strategy impact.",
+      list: [
+        "Track real-time skill development and learning activity of everyone in your company",
+        "Gain industry-specific insights to understand the fast-changing skills landscape",
+        "See every employee’s proficiency in 117+ technology, data, and business skills",
+        "Evaluate your skills against industry benchmarks using verified performance data",
+      ],
+      button: "Explore the Skills Dashboard",
+      feedback:
+        '"With knowledge sharing and continued learning, we can increase productivity and keep delivering excellent client services that support our revenue goals."',
+      compLogo: compLogo3,
+      compEmp: "Manpreet S.",
+      compName: "Chief Digital Officer, PwC India",
+    },
+    {
+      flxDir: "reverse",
+      mainImg: hiringImg,
+      heading: "RETAIN TALENT",
+      subHead: "Develop, retain, and advance your talent",
+      listHead:
+        "Be the company people want to join, stay at, and find their next move with.",
+      list: [
+        "Provide high-quality career development, from entry-level to C-suite roles",
+        "Use verified skill performance data to identify potential candidates for open roles",
+        "Retrain employees whose roles are impacted by emerging technologies",
+      ],
+      button: "Explore more Coursera advantages",
+      feedback:
+        '"Training like this allows us to attract, develop, and retain the top talent that helps Adobe maintain its reputation as a technology leader."',
+      compLogo: compLogo4,
+      compEmp: "Tim C.",
+      compName: "Senior Director of Applied Machine Learning, Adobe",
+    },
+  ];
   const popular = [
     "Business",
     "Computer Science",
@@ -122,7 +171,7 @@ const Hero = () => {
     "Health",
     "Art and Humanities",
   ];
-  const detail = [
+  const prgmDetail = [
     {
       img: Prgm1,
       academy: "Leadership Academy",
@@ -178,17 +227,132 @@ const Hero = () => {
       button: "Learn more",
     },
   ];
-
+  const bannerCont = {
+    heading: "Let’s talk about making talent your advantage",
+    subHeading:
+      "Connect with our team to learn how you can prepare your business for rapid change.",
+    btn1: "Contact us",
+    btn2: "Compare plans",
+    footer: "Upskilling fewer than 125 employees?",
+    footerSpan: "Get Coursera for Teams",
+  };
+  const footerData = [
+    [
+      [
+        "New & Trending",
+        "New Courses",
+        "Free Courses",
+        "Learn Artificial Intelligence",
+        "Learn ChatGPT",
+        "Learn Cyber Security",
+        "Learn Data Science",
+        "Learn Excel",
+        "Learn Generative AI with Large Language Models",
+        "Learn Prompt Engineering For Chatgpt",
+        "Learn Python",
+      ],
+      [
+        "Popular Skills",
+        "Learn Computer Science",
+        "Learn Data Analysis",
+        "Learn Digital Marketing",
+        "Learn Information Technology",
+        "Learn English",
+        "Learn Machine Learning",
+        "Learn Power Bi",
+        "Learn Product Management",
+        "Learn Project Management",
+        "Learn Web Development",
+      ],
+      [
+        "Popular Career Certificates",
+        "Google Advanced Data Analytics Professional Certificate",
+        "Google Business Intelligence Professional Certificate",
+        "Google Cybersecurity Professional Certificate",
+        "Google Data Analytics Professional Certificate",
+        "Google Digital Marketing & E-commerce Professional Certificate",
+        "IBM AI Engineering Professional Certificate",
+        "IBM Data Analyst Professional Certificate",
+        "Machine Learning Specialization",
+        "Meta Back-End Developer Professional Certificate",
+        "Meta Front-End Developer Professional Certificate",
+      ],
+      [
+        "Popular Career Articles",
+        "Examples of Strengths and Weaknesses for Job Interviews",
+        "High-Income Skills Worth Learning",
+        "How to Announce Your New Job on LinkedIn",
+        "How to Ask for a Letter of Recommendation",
+        "How to Write a Letter of Recommendation",
+        "How to Write an Eye-Catching Job Application Email",
+        "Popular Cybersecurity Certifications",
+        "The 4 Ps of Marketing",
+        "What Are Professional Development Goals",
+        "What Does a Data Analyst Do",
+      ],
+    ],
+    [
+      [
+        "Coursera",
+        "About",
+        "What We Offer",
+        "Leadership",
+        "Careers",
+        "Catalog",
+        "Coursera Plus",
+        "Professional Certificates",
+        "MasterTrack® Certificates",
+        "Degrees",
+        "For Enterprise",
+        "For Government",
+        "For Campus",
+        "Become a Partner",
+        "Coronavirus Response",
+        "Free Courses",
+        "All Courses",
+      ],
+      [
+        "Community",
+        "Learners",
+        "Partners",
+        "Beta Testers",
+        "Translators",
+        "Blog",
+        "Tech Blog",
+        "Teaching Center",
+      ],
+      [
+        "More",
+        "Press",
+        "Investors",
+        "Terms",
+        "Privacy",
+        "Help",
+        "Accessibility",
+        "Contact",
+        "Articles",
+        "Directory",
+        "Affiliates",
+        "Modern Slavery Statement",
+        "Do Not Sell/Share",
+      ],
+      [
+        <img src={Footer1} alt="icon" className="mb-10 " />,
+        <img src={Footer2} alt="icon" className="mb-10 " />,
+        <img src={Footer3} alt="icon" className="sm:mb-10 mb-0" />,
+      ],
+    ],
+  ];
   return (
     <>
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
       <BusinsCard content={cardCont} />
-      <div className="bg-gray-100">
-        {content.map((content, index) => (
+      {cardContent1.map((content, index) => (
+        <div className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}>
           <BusinsCard2 content={content} key={index} />
-        ))}
-      </div>
+        </div>
+      ))}
       <div className="flex items-center justify-center gap-20 py-20 flex-col bg-gray-100">
         <div className="text-center">
           <h1 className="font-bold text-4xl">
@@ -230,12 +394,21 @@ const Hero = () => {
               Browse Coursera Academies
             </h3>
             <div className="flex items-center justify-between sm:py-10 py-4 overflow-scroll gap-16  container m-auto">
-              {detail.map((detail, index) => (
+              {prgmDetail.map((detail, index) => (
                 <Prgms detail={detail} key={index} />
               ))}
             </div>
           </div>
         </div>
+      </div>
+      {cardContent2.map((content, index) => (
+        <div className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}>
+          <BusinsCard2 content={content} key={index} />
+        </div>
+      ))}
+      <BlkBanner content={bannerCont} />
+      <div className="bg-[#f3f3f3] sm:py-20 py-10">
+        <Footer data={footerData} />
       </div>
     </>
   );
