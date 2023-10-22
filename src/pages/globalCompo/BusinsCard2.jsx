@@ -1,4 +1,5 @@
 import React from "react";
+import Prgms from "./Prgms";
 
 const BusinsCard2 = (props) => {
   let dictn = props.content.flxDir ? "flex-row-reverse" : "flex-row";
@@ -50,14 +51,18 @@ const BusinsCard2 = (props) => {
               alt="images"
               className="m-auto rounded-md"
             />
-          ) : (
+          ) : props.content.VidCoverImage ? (
             <video
               src="https://videos.ctfassets.net/2pudprfttvy6/6b2EfyipwGqDqpB8zqJPDH/f9bb19fd48c78afff047e809b4b73c2d/courseramicrocred_09may23__720p_.mp4"
               typeof="video/mp4"
               controls
               className="md:w-4/5 m-auto cursor-pointer hover:brightness-75"
-              poster={props.content.CoverImage}
+              poster={props.content.VidCoverImage}
             ></video>
+          ) : (
+            <div>
+              <Prgms />
+            </div>
           )}
         </div>
       </div>

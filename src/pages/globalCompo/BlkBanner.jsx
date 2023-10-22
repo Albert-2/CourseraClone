@@ -3,8 +3,8 @@ import React from "react";
 const BlkBanner = (props) => {
   return (
     <>
-      <div>
-        <div className="container sm:w-[75%] w-[95%] m-auto  bg-[#1f1f1f] text-white sm:text-center text-left px-2 space-y-20 sm:py-20 py-10 rounded-md">
+      <div className="py-20">
+        <div className="container sm:w-[75%] w-[95%] m-auto bg-[#1f1f1f] text-white sm:text-center text-left px-2 space-y-20 sm:py-28 py-10 rounded-md">
           {/* <div className="container w-[75%] m-auto  bg-black text-white text-center skew-y-6"> */}
           <div className="space-y-8">
             <h1 className="sm:text-6xl text-3xl">{props.content.heading}</h1>

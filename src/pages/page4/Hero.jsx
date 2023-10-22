@@ -12,6 +12,12 @@ import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
 import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
 import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BlkBanner from "../globalCompo/BlkBanner";
+import backgroundLight from "../../assets/coursera-bg-light-white.png";
+import backgroundDark from "../../assets/coursera-bg-drk-blue.png";
+import AchievementCard from "../globalCompo/achievementCard";
+import BlueBanner from "../globalCompo/BlueBanner";
+import BusinsCard2 from "../globalCompo/BusinsCard2";
+import imgOne from "./assets/card_Citizen_Workforce_Development.jpg";
 
 const Hero = () => {
   const navBar = {
@@ -37,31 +43,6 @@ const Hero = () => {
       },
     ],
   };
-  const features = [
-    {
-      icon: icon1,
-      heading: "World-Class Content",
-      detail:
-        "Empower your learners with world-class training and credentials from 275+ leading universities and companies.",
-    },
-    {
-      icon: icon2,
-      heading: "In-Demand Skills",
-      detail: "Offer training in data, technology, and leadership skills.",
-    },
-    {
-      icon: icon3,
-      heading: "Hands-on Learning",
-      detail:
-        "Enable applied learning through real-world assessments and projects.",
-    },
-    {
-      icon: icon4,
-      heading: "Actionable Insights",
-      detail:
-        "Track, measure, and benchmark learner progress to guide training strategies.",
-    },
-  ];
   const footerData = [
     [
       [
@@ -177,34 +158,117 @@ const Hero = () => {
     footer: "Upskilling fewer than 125 government employees?",
     footerSpan: "Get Coursera for Teams",
   };
+  const achievements = [
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "Global Skills Report 2023: ",
+      subHeading:
+        "Build a job-relevant curriculum with skill insights drawn from 124M+ learners to prepare your students for the digital economy",
+      button: "Get report",
+    },
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "WEBINAR: State of Global Skills 2023 with Learning Leaders",
+      subHeading: "Hear expert insights on in-demand skill trends ",
+      button: "Watch now",
+    },
+    {
+      backImg: backgroundLight,
+      textCol: "text-black",
+      heading: "Online Training Provider Guide",
+      subHeading:
+        "Learn how investing in online training can help you close skill gaps and boost employee retention.",
+      button: "Get guide",
+    },
+  ];
+  const blueBannerCont = {
+    heading:
+      "Grow your talent and economy with the world’s leading skills platform",
+    subHeading:
+      "Deploy training for in-demand skills to your citizen workforce and government employees.",
+    features: [
+      {
+        icon: icon1,
+        heading: "World-Class Content",
+        detail:
+          "Empower your learners with world-class training and credentials from 275+ leading universities and companies.",
+      },
+      {
+        icon: icon2,
+        heading: "In-Demand Skills",
+        detail: "Offer training in data, technology, and leadership skills.",
+      },
+      {
+        icon: icon3,
+        heading: "Hands-on Learning",
+        detail:
+          "Enable applied learning through real-world assessments and projects.",
+      },
+      {
+        icon: icon4,
+        heading: "Actionable Insights",
+        detail:
+          "Track, measure, and benchmark learner progress to guide training strategies.",
+      },
+    ],
+  };
+  const progCont = [
+    {
+      image: imgOne,
+      heading: "GOVERNMENT EMPLOYEE UPSKILLING",
+      subHeading: "Train your government employees",
+      desc: "Build the skilled workforce needed to improve service efficiency and drive performance results.",
+    },
+    {
+      image: imgOne,
+      heading: "GOVERNMENT EMPLOYEE UPSKILLING",
+      subHeading: "Train your government employees",
+      desc: "Build the skilled workforce needed to improve service efficiency and drive performance results.",
+    },
+  ];
   return (
     <>
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
-      <div className=" bg-blue-700 sm:p-20 p-8">
-        <div className="container m-auto flex item-center justify-between md:flex-row flex-col md:gap-20 gap-10">
-          <div className="flex flex-col item-center justify-start  text-white space-y-6 flex-1">
-            <h1 className="font-bold sm:text-4xl text-3xl">
-              Expand your curriculum and empower your faculty
-            </h1>
-            <p className="sm:text-lg text-base">
-              Deliver practical, job-relevant learning experiences with
-              professional content and courses from university and industry
-              experts
-            </p>
-          </div>
-          <div className="flex item-center justify-evenly flex-wrap md:flex-row flex-col  text-white flex-1 gap-10">
-            {features.map((feature, index) => (
-              <div className=" flex  items-start justify-start flex-col space-y-2 md:w-[40%]">
-                {/* <div className=" flex items-start justify-start flex-col space-y-2 w-[300px]"> */}
-                <img src={feature.icon} alt="icon" className="" />
-                <h1 className="text-xl font-semibold">{feature.heading}</h1>
-                <p className="">{feature.detail}</p>
-              </div>
-            ))}
-          </div>
+      <div className="py-24 flex items-start justify-center sm:flex-row flex-col md:container m-auto px-2 gap-6">
+        <div className=" sm:w-[15%] mx-auto w-full">
+          <h1 className="font-bold sm:text-4xl text-3xl ">
+            Choose the right career solutions for your citizens and employees
+          </h1>
         </div>
-      </div><BlkBanner content={bannerCont} />
+        <div className=" flex items-center justify-center gap-10 sm:flex-row flex-col sm:max-w-[50%] max-w-full sm:w-full w-[383px]">
+          {progCont.map((prog, progIndex) => (
+            <div className=" flex flex-col sm:w-[45%] w-full rounded-xl overflow-hidden">
+              <img src={imgOne} alt="images" />
+              <div className="px-2 py-8 flex flex-col item-left justify-center gap-4 bg-gray-100">
+                <h1 className="md:text-base text-sm">GOVERNMENT EMPLOYEE UPSKILLING</h1>
+                <h4 className="font-semibold md:text-2xl text-xl">
+                  Train your government employees
+                </h4>
+                <p className="text-sm">
+                  Build the skilled workforce needed to improve service
+                  efficiency and drive performance results.
+                </p> 
+                <a
+                  href="#"
+                  className="hover:underline hover:text-blue-800 text-blue-700"
+                >
+                  Learn more
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <BlueBanner content={blueBannerCont} />
+      <BlkBanner content={bannerCont} />
+      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-[75%] w-[95%] m-auto py-20">
+        {achievements.map((achvmnt, index) => (
+          <AchievementCard key={index} achievements={achvmnt} />
+        ))}
+      </div>
       <div className="bg-[#f3f3f3] sm:py-20 py-10">
         <Footer data={footerData} />
       </div>

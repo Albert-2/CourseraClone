@@ -81,7 +81,6 @@ const Hero = () => {
   const updateCont = (e) => {
     let temp = Number(e.target.attributes.id.value);
     setIndex(temp);
-    document.getElementById(temp).classList.toggle("text-blue-700");
   };
   const content = [
     {
@@ -962,7 +961,7 @@ const Hero = () => {
         </div>
       </div>
       <Advtsng />
-      <div className="container m-auto flex flex-col gap-6 py-6 px-4">
+      <div className="container m-auto flex flex-col gap-6 py-6 px-4 ">
         <div className="flex md:flex-row flex-col md:items-center items-start justify-start gap-6">
           <h1 className="font-bold text-4xl tracking-wide inline">
             Launch a new career in as little as 6 months
@@ -972,7 +971,9 @@ const Hero = () => {
         <ul className="flex items-center justify-between border-b-4 py-4 overflow-scroll gap-4">
           {content.map((course, courseIndex) => (
             <li
-              className="min-w-fit cursor-pointer"
+              className={`min-w-fit cursor-pointer ${
+                index == courseIndex && "text-blue-700"
+              }`}
               id={courseIndex}
               key={courseIndex}
               onClick={updateCont}

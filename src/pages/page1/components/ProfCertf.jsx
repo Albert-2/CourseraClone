@@ -2,7 +2,7 @@ import React from "react";
 
 const ProfCertf = (props) => {
   return (
-    <div className="flex rounded-md overflow-hidden flex-col h-fit shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] md:hover:scale-105 sm:cursor-pointer  md:w-[300px] w-full  transition">
+    <div className="flex rounded-md overflow-hidden flex-col h-fit shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] md:hover:scale-105 sm:cursor-pointer  md:w-[300px] w-full transition">
       <img
         src={props.course.image}
         alt="images"

@@ -2,7 +2,7 @@ import React from "react";
 
 const Prgms = (props) => {
   return (
-    <div className="flex items-start justify-center flex-col rounded-lg cursor-pointer border-2 sm:hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] overflow-hidden sm:min-w-[275px] min-w-full h-[400px] bg-white">
+    <div className=" flex items-start justify-center flex-col rounded-lg cursor-pointer border-2 sm:hover:shadow-[rgba(100,100,111,0.2)_0px_7px_29px_0px] overflow-hidden sm:min-w-[275px] min-w-full h-[400px] bg-white">
       <img
         src={props.detail.img}
         alt="image"

@@ -7,7 +7,7 @@ import ClgCollage from "./assets/university-collage.png";
 import BusinsCard from "../globalCompo/BusinsCard";
 import BusinsCard2 from "../globalCompo/BusinsCard2";
 import CareerAcademy from "./assets/career-academy.jpg";
-import CoverImage from "./assets/video_cover_image.jpg";
+import VidCoverImage from "./assets/video_cover_image.jpg";
 import icon1 from "./assets/featureIcons/icon_one.svg";
 import icon2 from "./assets/featureIcons/icon_two.svg";
 import icon3 from "./assets/featureIcons/icon_three.svg";
@@ -17,6 +17,10 @@ import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
 import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
 import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BlkBanner from "../globalCompo/BlkBanner";
+import AchievementCard from "../globalCompo/achievementCard";
+import backgroundLight from "../../assets/coursera-bg-light-white.png";
+import backgroundDark from "../../assets/coursera-bg-drk-blue.png";
+import BlueBanner from "../globalCompo/BlueBanner";
 
 const Hero = () => {
   const navBar = {
@@ -71,7 +75,7 @@ const Hero = () => {
       button: "Learn more about Career Academy",
     },
     {
-      CoverImage,
+      VidCoverImage,
       flxDir: "reverse",
       heading: "PROFESSIONAL CERTIFICATES",
       subHead:
@@ -79,32 +83,6 @@ const Hero = () => {
       listHead:
         "A survey of 5,000 students and employers in 11 countries finds that the majority value Professional Certificates for driving employment outcomes. Professional Certificates help students demonstrate to employers that they are qualified and job-ready.",
       button: "Get report",
-    },
-  ];
-  const features = [
-    {
-      icon: icon1,
-      heading: "World-Class Content",
-      detail:
-        "Connect students to a wide range of content from hundreds of industry leaders and universities.",
-    },
-    {
-      icon: icon2,
-      heading: "Guided Projects",
-      detail:
-        "Give students hands-on projects to practice skills and stand out to employers.",
-    },
-    {
-      icon: icon3,
-      heading: "Professional Certificates",
-      detail:
-        "Help your students grow job confidence, apply learning, and hone critical skills in high-growth fields.",
-    },
-    {
-      icon: icon4,
-      heading: "LMS Integration",
-      detail:
-        "Streamline the learning experience by linking Coursera to your learning management system.",
     },
   ];
   const footerData = [
@@ -221,6 +199,63 @@ const Hero = () => {
     btn1: "Contact us",
     btn2: "Compare plans",
   };
+  const achievements = [
+    {
+      backImg: backgroundLight,
+      textCol: "text-black",
+      heading: "Global Skills Report 2023: ",
+      subHeading:
+        "Build a job-relevant curriculum with skill insights drawn from 124M+ learners to prepare your students for the digital economy",
+      button: "Get report",
+    },
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "WEBINAR: State of Global Skills 2023 with Learning Leaders",
+      subHeading: "Hear expert insights on in-demand skill trends ",
+      button: "Watch now",
+    },
+    {
+      backImg: backgroundLight,
+      textCol: "text-black",
+      heading: "The Professional Certificates Playbook:",
+      subHeading:
+        "Learn how universities are using industry micro-credentials to improve student employment outcomes.",
+      button: "Read now",
+    },
+  ];
+  const blueBannerCont = {
+    heading: "Expand your curriculum and empower your faculty",
+    subHeading:
+      "Deliver practical, job-relevant learning experiences with professional content and courses from university and industry experts",
+    features: [
+      {
+        icon: icon1,
+        heading: "World-Class Content",
+        detail:
+          "Connect students to a wide range of content from hundreds of industry leaders and universities.",
+      },
+      {
+        icon: icon2,
+        heading: "Guided Projects",
+        detail:
+          "Give students hands-on projects to practice skills and stand out to employers.",
+      },
+      {
+        icon: icon3,
+        heading: "Professional Certificates",
+        detail:
+          "Help your students grow job confidence, apply learning, and hone critical skills in high-growth fields.",
+      },
+      {
+        icon: icon4,
+        heading: "LMS Integration",
+        detail:
+          "Streamline the learning experience by linking Coursera to your learning management system.",
+      },
+    ],
+  };
+
   return (
     <>
       <GlobNavbar info={navBar} />
@@ -231,34 +266,13 @@ const Hero = () => {
           <BusinsCard2 content={content} key={index} />
         ))}
       </div>
-      <div className=" bg-blue-700 sm:p-20 p-8">
-        <div className="container m-auto flex item-center justify-between md:flex-row flex-col md:gap-20 gap-10">
-          <div className="flex flex-col item-center justify-start  text-white space-y-6 flex-1">
-            <h1 className="font-bold sm:text-4xl text-3xl">
-              Expand your curriculum and empower your faculty
-            </h1>
-            <p className="sm:text-lg text-base">
-              Deliver practical, job-relevant learning experiences with
-              professional content and courses from university and industry
-              experts
-            </p>
-          </div>
-          <div className="flex item-center justify-evenly flex-wrap md:flex-row flex-col  text-white flex-1 gap-6">
-            {features.map((feature, index) => (
-              <div
-                className=" flex  items-start justify-start flex-col space-y-2 md:w-[40%]"
-                key={index}
-              >
-                {/* <div className=" flex items-start justify-start flex-col space-y-2 w-[300px]"> */}
-                <img src={feature.icon} alt="icon" className="" />
-                <h1 className="text-xl font-semibold">{feature.heading}</h1>
-                <p className="">{feature.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      <BlueBanner content={blueBannerCont} />
       <BlkBanner content={bannerCont} />
+      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-[75%] w-[95%] m-auto py-20">
+        {achievements.map((achvmnt, index) => (
+          <AchievementCard key={index} achievements={achvmnt} />
+        ))}
+      </div>
       <div className="bg-[#f3f3f3] sm:py-20 py-10">
         <Footer data={footerData} />
       </div>

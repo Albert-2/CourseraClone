@@ -32,6 +32,8 @@ import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
 import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
 import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BlkBanner from "../globalCompo/BlkBanner";
+import AchievementCard from "../globalCompo/achievementCard";
+import backgroundDark from "../../assets/coursera-bg-drk-blue.png";
 
 const Hero = () => {
   const navBar = {
@@ -343,6 +345,30 @@ const Hero = () => {
       ],
     ],
   ];
+  const achievements = [
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "DEMO VIDEO: Experience Coursera for Business",
+      subHeading: "Make talent your competitive advantage",
+      button: "Watch now",
+    },
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "Global Skills Report 2023: ",
+      subHeading:
+        "Transform talent with skill insights drawn from 124M+ learners",
+      button: "Get report",
+    },
+    {
+      backImg: backgroundDark,
+      textCol: "text-white",
+      heading: "WEBINAR: State of Global Skills 2023 with Learning Leaders",
+      subHeading: "Hear expert insights on in-demand skill trends ",
+      button: "Watch now",
+    },
+  ];
   return (
     <>
       <GlobNavbar info={navBar} />
@@ -407,6 +433,11 @@ const Hero = () => {
         </div>
       ))}
       <BlkBanner content={bannerCont} />
+      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-[75%] w-[95%] m-auto py-20">
+        {achievements.map((achvmnt, index) => (
+          <AchievementCard key={index} achievements={achvmnt} />
+        ))}
+      </div>
       <div className="bg-[#f3f3f3] sm:py-20 py-10">
         <Footer data={footerData} />
       </div>
