@@ -34,6 +34,7 @@ import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BlkBanner from "../globalCompo/BlkBanner";
 import AchievementCard from "../globalCompo/achievementCard";
 import backgroundDark from "../../assets/coursera-bg-drk-blue.png";
+import PageRoute from "../globalCompo/PageRoute";
 
 const Hero = () => {
   const navBar = {
@@ -371,12 +372,16 @@ const Hero = () => {
   ];
   return (
     <>
+      <PageRoute />
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
       <BusinsCard content={cardCont} />
       {cardContent1.map((content, index) => (
-        <div className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}>
-          <BusinsCard2 content={content} key={index} />
+        <div
+          className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}
+          key={index}
+        >
+          <BusinsCard2 content={content} />
         </div>
       ))}
       <div className="flex items-center justify-center gap-20 py-20 flex-col bg-gray-100">
@@ -428,8 +433,11 @@ const Hero = () => {
         </div>
       </div>
       {cardContent2.map((content, index) => (
-        <div className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}>
-          <BusinsCard2 content={content} key={index} />
+        <div
+          className={`${index % 2 == 0 ? "bg-gray-100" : "bg-white"}`}
+          key={index}
+        >
+          <BusinsCard2 content={content} />
         </div>
       ))}
       <BlkBanner content={bannerCont} />

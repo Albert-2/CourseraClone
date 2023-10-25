@@ -75,6 +75,7 @@ import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
 import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
 import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
 import BusinsCard from "../globalCompo/BusinsCard.jsx";
+import PageRoute from "../globalCompo/PageRoute.jsx";
 
 const Hero = () => {
   const [index, setIndex] = useState(0);
@@ -932,6 +933,7 @@ const Hero = () => {
   ];
   return (
     <>
+      <PageRoute />
       <Navbar />
       <div className="flex items-center justify-center container m-auto py-8 px-4">
         <div className="flex-1 flex md:text-left text-center justify-center md:items-start flex-col space-y-10 md:max-w-max max-w-sm">

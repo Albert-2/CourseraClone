@@ -25,8 +25,8 @@ const AchievementCard = (props) => {
             id="cds-react-aria-58"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M16.793 9.5L9.646 2.354l.708-.708L18.707 10l-8.353 8.354-.708-.707 7.147-7.147H2v-1h14.793z"
               fill="currentColor"
             ></path>

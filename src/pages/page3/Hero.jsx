@@ -21,6 +21,7 @@ import AchievementCard from "../globalCompo/achievementCard";
 import backgroundLight from "../../assets/coursera-bg-light-white.png";
 import backgroundDark from "../../assets/coursera-bg-drk-blue.png";
 import BlueBanner from "../globalCompo/BlueBanner";
+import PageRoute from "../globalCompo/PageRoute";
 
 const Hero = () => {
   const navBar = {
@@ -258,6 +259,7 @@ const Hero = () => {
 
   return (
     <>
+      <PageRoute />
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
       <BusinsCard content={cardCont} />

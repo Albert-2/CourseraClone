@@ -9,7 +9,11 @@ const GlobNavbar = (props) => {
     <div className="sticky top-0 z-20 bg-white">
       <div className="border-b-2 relative">
         <div className="px-4 container m-auto flex items-center lg:justify-center justify-between gap-10 py-6 sticky top-0  z-20">
-          <img src={props.info.logo} alt="icon" className="sm:w-64 w-44 h-6  " />
+          <img
+            src={props.info.logo}
+            alt="icon"
+            className="sm:w-64 w-44 h-6  "
+          />
           <div className=" lg:flex flex-1 items-center justify-start hidden">
             <ul className="flex items-center justify-start  flex-1 gap-6 text-sm">
               {props.info.navLinks.map((link, linkIndex) => (
@@ -34,7 +38,10 @@ const GlobNavbar = (props) => {
               linkIndex != props.info.navLinks.length - 1 ? (
                 <li key={linkIndex}>{link}</li>
               ) : (
-                <button className="bg-blue-700 text-sm text-white rounded-md py-2 px-4">
+                <button
+                  className="bg-blue-700 text-sm text-white rounded-md py-2 px-4"
+                  key={linkIndex}
+                >
                   Contact Sales
                 </button>
               )
