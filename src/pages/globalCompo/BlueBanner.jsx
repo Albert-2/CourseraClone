@@ -3,7 +3,7 @@ import React from "react";
 const BlueBanner = (props) => {
   return (
     <>
-      <div className="bg-blue-700 sm:p-20 p-8">
+      <div className="bg-blue-700 sm:p-20 py-8 sm:px-0 px-4">
         <div className="container m-auto flex item-center justify-between md:flex-row flex-col md:gap-20 gap-10">
           <div className="flex flex-col item-center justify-start  text-white space-y-6 flex-1">
             <h1 className="font-bold sm:text-4xl text-3xl">
@@ -19,7 +19,7 @@ const BlueBanner = (props) => {
               >
                 <img src={feature.icon} alt="icon" />
                 <h1 className="text-xl font-semibold">{feature.heading}</h1>
-                <p className="">{feature.detail}</p>
+                <p >{feature.detail}</p>
               </div>
             ))}
           </div>

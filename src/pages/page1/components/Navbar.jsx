@@ -17,7 +17,7 @@ const Navbar = () => {
             </button>
             <input
               placeholder="What do you want to learn?"
-              className="border-black border-2 rounded-md p-2 text-sm flex-1"
+              className="rounded-md p-2 text-sm flex-1"
             />
           </div>
           <div className="flex items-center justify-between space-x-8">

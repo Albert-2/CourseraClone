@@ -417,7 +417,7 @@ const Hero = () => {
           </div>
           <div className=" flex flex-col items-start justify-center">
             <h3 className="font-bold text-2xl text-white ">
-              Browse Coursera Academies
+              Browse Coursera Acadezmies
             </h3>
             <div className="flex items-center justify-between sm:py-10 py-4 overflow-scroll gap-16  container m-auto">
               {prgmDetail.map((detail, index) => (
@@ -433,7 +433,7 @@ const Hero = () => {
         </div>
       ))}
       <BlkBanner content={bannerCont} />
-      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-[75%] w-[95%] m-auto py-20">
+      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-auto w-[95%] m-auto  py-20  ">
         {achievements.map((achvmnt, index) => (
           <AchievementCard key={index} achievements={achvmnt} />
         ))}

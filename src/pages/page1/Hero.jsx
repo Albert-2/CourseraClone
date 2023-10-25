@@ -248,7 +248,7 @@ const Hero = () => {
       ],
     },
     {
-      title: "Bokkeeper",
+      title: "Bookeeper",
       subTitle: "Record financial transactions and manage financial records",
       userIcon: Adrienne,
       userName: "Christina",

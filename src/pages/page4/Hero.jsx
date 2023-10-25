@@ -18,6 +18,7 @@ import AchievementCard from "../globalCompo/achievementCard";
 import BlueBanner from "../globalCompo/BlueBanner";
 import BusinsCard2 from "../globalCompo/BusinsCard2";
 import imgOne from "./assets/card_Citizen_Workforce_Development.jpg";
+import CarSoln from "./components/CarSoln";
 
 const Hero = () => {
   const navBar = {
@@ -217,9 +218,9 @@ const Hero = () => {
   const progCont = [
     {
       image: imgOne,
-      heading: "GOVERNMENT EMPLOYEE UPSKILLING",
-      subHeading: "Train your government employees",
-      desc: "Build the skilled workforce needed to improve service efficiency and drive performance results.",
+      heading: "CITIZEN WORKFORCE DEVELOPMENT",
+      subHeading: "Train your citizens",
+      desc: "Enable your workforce to develop job-relevant skills to help reduce unemployment and increase economic competitiveness.",
     },
     {
       image: imgOne,
@@ -238,27 +239,9 @@ const Hero = () => {
             Choose the right career solutions for your citizens and employees
           </h1>
         </div>
-        <div className=" flex items-center justify-center gap-10 sm:flex-row flex-col sm:max-w-[50%] max-w-full sm:w-full w-[383px]">
+        <div className=" flex items-stretch justify-center gap-10 sm:flex-row flex-col sm:max-w-[60%] max-w-full sm:w-full w-[383px]">
           {progCont.map((prog, progIndex) => (
-            <div className=" flex flex-col sm:w-[45%] w-full rounded-xl overflow-hidden">
-              <img src={imgOne} alt="images" />
-              <div className="px-2 py-8 flex flex-col item-left justify-center gap-4 bg-gray-100">
-                <h1 className="md:text-base text-sm">GOVERNMENT EMPLOYEE UPSKILLING</h1>
-                <h4 className="font-semibold md:text-2xl text-xl">
-                  Train your government employees
-                </h4>
-                <p className="text-sm">
-                  Build the skilled workforce needed to improve service
-                  efficiency and drive performance results.
-                </p> 
-                <a
-                  href="#"
-                  className="hover:underline hover:text-blue-800 text-blue-700"
-                >
-                  Learn more
-                </a>
-              </div>
-            </div>
+            <CarSoln content={prog} key={progIndex} />
           ))}
         </div>
       </div>

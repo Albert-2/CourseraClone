@@ -268,7 +268,7 @@ const Hero = () => {
       </div>
       <BlueBanner content={blueBannerCont} />
       <BlkBanner content={bannerCont} />
-      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-[75%] w-[95%] m-auto py-20">
+      <div className="flex items-stretch justify-center gap-4 sm:flex-row flex-col container sm:w-auto w-[95%] m-auto sm:py-20 py-10">
         {achievements.map((achvmnt, index) => (
           <AchievementCard key={index} achievements={achvmnt} />
         ))}
