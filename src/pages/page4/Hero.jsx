@@ -236,7 +236,7 @@ const Hero = () => {
       <GlobHero heroInfo={heroContent} />
       <div className="py-24 flex items-start justify-center sm:flex-row flex-col md:container m-auto px-2 gap-6">
         <div className=" sm:w-[15%] mx-auto w-full">
-          <h1 className="font-bold sm:text-4xl text-3xl ">
+          <h1 className="font-bold sm:text-4xl text-3xl tracking-wide leading-relaxed">
             Choose the right career solutions for your citizens and employees
           </h1>
         </div>
