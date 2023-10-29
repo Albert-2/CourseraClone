@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
-  const handleClick = () => {
-    setHidden(!hidden);
-  };
   return (
-    <div className="sticky top-0 bg-white py-2">
+    <div className="sticky top-0 bg-white py-2 text-sm">
       <div className="lg:block hidden">
         <div className="flex items-center justify-between py-2 px-6">
           <div className="flex items-center justify-between space-x-3">
@@ -18,7 +16,7 @@ const Navbar = () => {
             <form
               action="/"
               method="post"
-              className="border-2 border-black rounded-md flex items-stretch justify-center overflow-hidden"
+              className=" rounded-md flex items-stretch justify-center overflow-hidden"
             >
               <input
                 placeholder="What do you want to learn?"
@@ -61,7 +59,7 @@ const Navbar = () => {
       </div>
       <div className="lg:hidden block relative">
         <div className="flex items-center justify-between py-6 px-4 z-10">
-          <button onClick={handleClick}>
+          <button onClick={() => setHidden(!hidden)}>
             {hidden ? (
               <i className="fa-solid fa-multiply fa-2xl cursor-pointer"></i>
             ) : (
@@ -72,45 +70,51 @@ const Navbar = () => {
           <i className="fa-solid fa-magnifying-glass fa-lg"></i>
         </div>
         {hidden && (
-          <div className="absolute top-full bg-white z-10 w-full">
-            <ul className="overflow-scroll h-[80vh]">
-              <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-                <li>For Business</li>
-                <li>For Business</li>
-                <li>For Business</li>
-                <li>For Business</li>
-                <li>For Business</li>
+          <div className="absolute top-full bg-white z-10 w-full flex items-stretch justify-center flex-col">
+            <ul className="overflow-scroll h-[75vh]  ">
+              <ul className="border-b-2 p-4 flex  items-start flex-col justify-center space-y-6">
+                <li>
+                  <Link to="/">For Individuals</Link>
+                </li>
+                <li>
+                  <Link to="/page2">For Business</Link>
+                </li>
+                <li>
+                  <Link to="/page3">For Universities</Link>
+                </li>
+                <li>
+                  <Link to="/page4">For Goverments</Link>
+                </li>
               </ul>
               <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-                <li className="font-bold">Goals</li>
+                <li className="font-bold ">Goals</li>
                 <li>Take a free course</li>
-                <li>Take a free course</li>
-                <li>Take a free course</li>
+                <li>Earn a Degree</li>
+                <li>Earn a Certificate</li>
               </ul>
               <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
                 <li className="font-bold">Subjects</li>
                 <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
-                <li>Data Science</li>
+                <li>Business</li>
+                <li>Computer Science</li>
+                <li>Information Technology</li>
+                <li>Language Learning</li>
+                <li>Health</li>
+                <li>Personal Development</li>
+                <li>Physical Science and Engineering</li>
+                <li>Social Sciences</li>
+                <li>Arts and Humanities</li>
+                <li>Math and Logic</li>
               </ul>
               <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
                 <li>Browse all subjects</li>
               </ul>
             </ul>
-            <ul className="flex flex-col justify-center p-4 space-y-2">
-              <button className="flex-1 p-4 text-white bg-blue-700 font-semibold">
+            <ul className="flex flex-col justify-center px-4  sm:space-y-4 space-y-2 flex-1">
+              <button className="flex-1 sm:p-4 p-3 text-white bg-blue-700 font-semibold">
                 Join for free
               </button>
-              <button className="flex-1 p-4 border-2 border-blue-700 text-blue-700 font-semibold">
+              <button className="flex-1 sm:p-4 p-3 border-2 border-blue-700 text-blue-700 font-semibold">
                 Log In
               </button>
             </ul>

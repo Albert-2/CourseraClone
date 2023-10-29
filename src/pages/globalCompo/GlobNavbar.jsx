@@ -7,8 +7,8 @@ const GlobNavbar = (props) => {
   };
   return (
     <div className="sticky top-0 z-20 bg-white">
-      <div className="border-b-2 relative">
-        <div className="px-4 container m-auto flex items-center lg:justify-center justify-between gap-10 py-6 sticky top-0  z-20">
+      <div className="relative">
+        <div className="px-4 container m-auto flex items-center lg:justify-center justify-between gap-10 py-6 sticky top-0 z-20">
           <img
             src={props.info.logo}
             alt="icon"
