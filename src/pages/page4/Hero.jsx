@@ -234,13 +234,13 @@ const Hero = () => {
       <PageRoute />
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
-      <div className="py-24 flex items-start justify-center sm:flex-row flex-col md:container m-auto px-2 gap-6">
-        <div className=" sm:w-[15%] mx-auto w-full">
-          <h1 className="font-bold sm:text-4xl text-3xl tracking-wide leading-relaxed">
+      <div className="py-24 flex md:items-start items-center justify-center md:flex-row flex-col md:container m-auto px-2 gap-6">
+        <div className="md:w-[25%] mx-auto w-full">
+          <h1 className="font-bold sm:text-4xl text-3xl tracking-wide ">
             Choose the right career solutions for your citizens and employees
           </h1>
         </div>
-        <div className=" flex items-stretch justify-center gap-10 sm:flex-row flex-col sm:max-w-[60%] max-w-full sm:w-full w-[383px]">
+        <div className="flex items-center  justify-center gap-10 sm:flex-row flex-col md:max-w-[50%] max-w-full sm:w-full w-[383px]">
           {progCont.map((prog, progIndex) => (
             <CarSoln content={prog} key={progIndex} />
           ))}

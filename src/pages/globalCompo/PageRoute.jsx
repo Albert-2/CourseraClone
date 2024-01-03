@@ -9,7 +9,7 @@ const PageRoute = () => {
 
   return (
     <>
-      <div className="bg-black border-2 border-white flex items-center justify-stretch space-x-4 lg:block hidden p-4">
+      <div className="bg-black border-2 border-white  items-center justify-stretch space-x-4 lg:flex hidden px-4">
         <Link
           to="/"
           className={`text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent ${

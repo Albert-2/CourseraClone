@@ -1,0 +1,12 @@
+export { default as Prof11 } from "./Prof11.png";
+export { default as Prof12 } from "./Prof12.png";
+export { default as Prof21 } from "./Prof21.png";
+export { default as Prof22 } from "./Prof22.png";
+export { default as Prof31 } from "./Prof31.png";
+export { default as Prof41 } from "./Prof41.png";
+export { default as Prof42 } from "./Prof42.png";
+export { default as Prof51 } from "./Prof51.png";
+export { default as Prof52 } from "./Prof52.png";
+export { default as Prof61 } from "./Prof61.png";
+export { default as Prof71 } from "./Prof71.png";
+export { default as Prof81 } from "./Prof81.png";

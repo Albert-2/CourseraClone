@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
   return (
-    <div className="sticky top-0 bg-white py-2 text-sm">
-      <div className="lg:block hidden">
-        <div className="flex items-center justify-between py-2 px-6">
-          <div className="flex items-center justify-between space-x-3">
+    <div className="  sticky top-0 bg-white py-2 text-sm">
+      <div className="  lg:block hidden">
+        <div className=" flex items-center justify-between py-2 px-6">
+          <div className=" flex items-center justify-between space-x-5">
             <img src={logo} alt="logo" className="w-[150px] cursor-pointer" />
             <button className="text-white bg-blue-700 font-semibold rounded-md py-2 px-4 ">
               Explore
@@ -16,11 +16,11 @@ const Navbar = () => {
             <form
               action="/"
               method="post"
-              className=" rounded-md flex items-stretch justify-center overflow-hidden"
+              className="rounded-md flex items-stretch justify-center overflow-hidden"
             >
               <input
                 placeholder="What do you want to learn?"
-                className=" p-2 text-sm flex-1 outline-none border-none"
+                className=" p-2 text-sm flex-1 outline-none border-2 border-[#dfdede]"
               />
               <button type="submit" className="p-3 bg-blue-700">
                 <svg
@@ -50,14 +50,14 @@ const Navbar = () => {
           <div className="flex items-center justify-between space-x-6">
             <p>Online Degrees</p>
             <p>Find Your New Career</p>
-            <p className="text-blue-700">Log In</p>
+            <p className="text-blue-700 cursor-pointer">Log In</p>
             <button className="text-white bg-blue-700 rounded-md py-2 px-4 font-semibold">
               Join for Free
             </button>
           </div>
         </div>
       </div>
-      <div className="lg:hidden block relative">
+      <div className=" lg:hidden block relative">
         <div className="flex items-center justify-between py-6 px-4 z-10">
           <button onClick={() => setHidden(!hidden)}>
             {hidden ? (
@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
         {hidden && (
           <div className="absolute top-full bg-white z-10 w-full flex items-stretch justify-center flex-col">
-            <ul className="overflow-scroll h-[75vh]  ">
+            <ul className="overflow-scroll h-[76vh]  ">
               <ul className="border-b-2 p-4 flex  items-start flex-col justify-center space-y-6">
                 <li>
                   <Link to="/">For Individuals</Link>

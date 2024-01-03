@@ -1,0 +1,9 @@
+export { default as companyLogo1 } from "./Comp1.png";
+export { default as companyLogo2 } from "./Comp2.png";
+export { default as companyLogo3 } from "./Comp3.png";
+export { default as companyLogo4 } from "./Comp4.png";
+export { default as companyLogo5 } from "./Comp5.png";
+export { default as companyLogo6 } from "./Comp6.png";
+export { default as companyLogo7 } from "./Comp7.png";
+export { default as companyLogo8 } from "./Comp8.png";
+export { default as companyLogo9 } from "./Comp9.png";

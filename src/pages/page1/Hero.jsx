@@ -1,57 +1,68 @@
 import React, { useState } from "react";
 import MyContext from "../MyCont.jsx";
 import HeroImg from "./assets/heroImg.png";
-import Navbar from "./components/Navbar";
-import Advtsng from "./components/Advtsng";
-import CareerModal from "./components/CareerModal";
-import Adrienne from "./assets/users/Adrienne.png";
-import Rachel from "./assets/users/Rachel.png";
-import Daijah from "./assets/users/Daijah.png";
-import Chukwuma from "./assets/users/Chukwuma.png";
-import Hillary from "./assets/users/Hillary.png";
-import Emma from "./assets/users/Emma.png";
-import Julio from "./assets/users/Julio.png";
-import Prof11 from "./assets/courseImg/Prof11.png";
-import Prof12 from "./assets/courseImg/Prof12.png";
-import Prof21 from "./assets/courseImg/Prof21.png";
-import Prof22 from "./assets/courseImg/Prof22.png";
-import Prof31 from "./assets/courseImg/Prof31.png";
-import Prof41 from "./assets/courseImg/Prof41.png";
-import Prof42 from "./assets/courseImg/Prof42.png";
-import Prof51 from "./assets/courseImg/Prof51.png";
-import Prof52 from "./assets/courseImg/Prof52.png";
-import Prof61 from "./assets/courseImg/Prof61.png";
-import Prof71 from "./assets/courseImg/Prof71.png";
-import Prof81 from "./assets/courseImg/Prof81.png";
-import GoogleIcon from "./assets/smallGoogle.png";
-import IBMIcon from "./assets/smallIBM.png";
-import MetaIcon from "./assets/smallMeta.png";
-import IntuitIcon from "./assets/smallIntuit.png";
-import DegPrgm from "./components/DegPrgm.jsx";
-import Birla from "./assets/institutes/BirlaInst.png";
-import BirlaLogo from "./assets/institutes/smallBirla.png";
-import Jain from "./assets/institutes/JainInst.jpg";
-import JainLogo from "./assets/institutes/smallJain.png";
-import Stat from "./assets/institutes/StatInst.png";
-import StatLogo from "./assets/institutes/smallStat.png";
-import IIT from "./assets/institutes/IITInst.png";
-import IITLogo from "./assets/institutes/smallIIT.png";
-import Michigan from "./assets/institutes/MichiganInst.png";
-import MichiganLogo from "./assets/institutes/smallMichigan.png";
-import Roorkee from "./assets/institutes/RoorkeeInst.png";
-import RoorkeeLogo from "./assets/institutes/smallRoorkee.png";
-import London from "./assets/institutes/LondonInst.png";
-import LondonLogo from "./assets/institutes/smallLondon.png";
-import Illinois from "./assets/institutes/IllinoisInst.png";
-import IllinoisLogo from "./assets/institutes/smallIllinois.png";
-import Calf from "./assets/institutes/CalfInst.png";
-import CalfLogo from "./assets/institutes/smallCalf.png";
-import Leeds from "./assets/institutes/LeedsInst.png";
-import LeedsLogo from "./assets/institutes/smallLeeds.png";
-import Darth from "./assets/institutes/DarthInst.png";
-import DarthLogo from "./assets/institutes/smallDarth.png";
-import Illinois2 from "./assets/institutes/Illinois2Inst.png";
-import Illinois2Logo from "./assets/institutes/smallIllinois.png";
+import { Navbar, DegPrgm, Footer, Advtsng, CareerModal } from "./components";
+import {
+  Adrienne,
+  Rachel,
+  Daijah,
+  Chukwuma,
+  Hillary,
+  Emma,
+  Julio,
+} from "./assets/users";
+import {
+  Prof11,
+  Prof12,
+  Prof21,
+  Prof22,
+  Prof31,
+  Prof41,
+  Prof42,
+  Prof51,
+  Prof52,
+  Prof61,
+  Prof71,
+  Prof81,
+} from "./assets/courseImg";
+import { GoogleIcon, IBMIcon, MetaIcon, IntuitIcon } from "./assets/smallIcons";
+import {
+  Birla,
+  BirlaLogo,
+  Jain,
+  JainLogo,
+  Stat,
+  StatLogo,
+  IIT,
+  IITLogo,
+  Michigan,
+  MichiganLogo,
+  Roorkee,
+  RoorkeeLogo,
+  London,
+  LondonLogo,
+  Illinois,
+  IllinoisLogo,
+  Calf,
+  CalfLogo,
+  Leeds,
+  LeedsLogo,
+  Darth,
+  DarthLogo,
+  Illinois2,
+  Illinois2Logo,
+} from "./assets/institutes";
+import {
+  companyLogo1,
+  companyLogo2,
+  companyLogo3,
+  companyLogo4,
+  companyLogo5,
+  companyLogo6,
+  companyLogo7,
+  companyLogo8,
+  companyLogo9,
+} from "./assets/companyLogos";
 import Explore1 from "./assets/ExplrCourse1.jpg";
 import Explore2 from "./assets/ExplrCourse2.jpg";
 import Explore3 from "./assets/ExplrCourse3.jpg";
@@ -60,21 +71,10 @@ import ThreeImg from "./assets/ThreeImg.png";
 import FeedBack1 from "./assets/FeedBack1.png";
 import FeedBack2 from "./assets/FeedBack2.png";
 import FeedBack3 from "./assets/FeedBack3.png";
-import companyLogo1 from "./assets/companyLogos/Comp1.png";
-import companyLogo2 from "./assets/companyLogos/Comp2.png";
-import companyLogo3 from "./assets/companyLogos/Comp3.png";
-import companyLogo4 from "./assets/companyLogos/Comp4.png";
-import companyLogo5 from "./assets/companyLogos/Comp5.png";
-import companyLogo6 from "./assets/companyLogos/Comp6.png";
-import companyLogo7 from "./assets/companyLogos/Comp7.png";
-import companyLogo8 from "./assets/companyLogos/Comp8.png";
-import companyLogo9 from "./assets/companyLogos/Comp9.png";
 import LastImg from "./assets/LastImg.png";
-import Footer from "./components/Footer.jsx";
 import Footer1 from "../globalCompo/FooterAsst/Footer1.png";
 import Footer2 from "../globalCompo/FooterAsst/Footer2.png";
 import Footer3 from "../globalCompo/FooterAsst/Footer3.png";
-import BusinsCard from "../globalCompo/BusinsCard.jsx";
 import PageRoute from "../globalCompo/PageRoute.jsx";
 
 const Hero = () => {
