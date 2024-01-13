@@ -234,7 +234,7 @@ const Hero = () => {
       <PageRoute />
       <GlobNavbar info={navBar} />
       <GlobHero heroInfo={heroContent} />
-      <div className="py-24 flex md:items-start items-center justify-center md:flex-row flex-col md:container m-auto px-2 gap-6">
+      <div className="py-24 flexStyle md:items-start md:flex-row flex-col md:container m-auto px-2 gap-6">
         <div className="md:w-[25%] mx-auto w-full">
           <h1 className="font-bold sm:text-4xl text-3xl tracking-wide ">
             Choose the right career solutions for your citizens and employees

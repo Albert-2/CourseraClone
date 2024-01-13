@@ -2,7 +2,7 @@ import React from "react";
 
 const CarSoln = (props) => {
   return (
-    <div className=" flex items-center justify-center flex-col sm:w-[45%] w-full rounded-xl overflow-hidden ">
+    <div className=" flexStyle flex-col sm:w-[45%] w-full rounded-xl overflow-hidden ">
       <img src={props.content.image} alt="images" className="h-[40%] w-full" />
       <div className="px-2 py-8 flex flex-col item-left justify-center gap-4 bg-gray-100 ">
         <h1 className=" flex-1 md:text-base text-sm">

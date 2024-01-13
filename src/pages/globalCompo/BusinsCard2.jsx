@@ -6,7 +6,7 @@ const BusinsCard2 = (props) => {
   return (
     <>
       <div
-        className={`flex md:${dictn} flex-col items-center justify-center gap-6 container m-auto sm:px-0 px-4 sm:py-14  py-10`}
+        className={`flexStyle md:${dictn} flex-col gap-6 container m-auto sm:px-0 px-4 sm:py-14  py-10`}
       >
         <div className="flex flex-col items-start justify-center space-y-6 md:w-1/2 ">
           <h4 className="font-semibold text-lg">{props.content.heading}</h4>
@@ -26,7 +26,7 @@ const BusinsCard2 = (props) => {
           </ul>
           <a
             href="#"
-            className="text-blue-700 underline font-bold flex items-center justify-center gap-2 "
+            className="text-blue-700 underline font-bold flexStyle gap-2 "
           >
             {props.content.button}
             <svg

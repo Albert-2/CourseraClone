@@ -7,6 +7,7 @@ import Penn from "../assets/penn.png";
 import Umich from "../assets/umich.png";
 import Duke from "../assets/duke.png";
 import Stanford from "../assets/stanford.png";
+import { Link } from "react-router-dom";
 
 const Advtsng = () => {
   return (
@@ -18,62 +19,30 @@ const Advtsng = () => {
         </span>
       </h2>
       <div className="flex justify-center items-center flex-wrap gap-8">
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Illinois}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Google}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={IBM}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Imperial}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Penn}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Umich}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Duke}
-            alt="Colleges"
-          />
-        </a>
-        <a href="#">
-          <img
-            className=" sm:max-w-[100px] max-w-[75px]"
-            src={Stanford}
-            alt="Colleges"
-          />
-        </a>
+        <Link to="https://www.iit.edu/" target="_blank">
+          <img className="imgStyle" src={Illinois} alt="Colleges" />
+        </Link>
+        <Link to="https://about.google/intl/ALL_in/" target="_blank">
+          <img className="imgStyle" src={Google} alt="Colleges" />
+        </Link>
+        <Link to="https://www.ibm.com/training/" target="_blank">
+          <img className="imgStyle" src={IBM} alt="Colleges" />
+        </Link>
+        <Link to="https://www.imperial.ac.uk/" target="_blank">
+          <img className="imgStyle" src={Imperial} alt="Colleges" />
+        </Link>
+        <Link to="https://www.upenn.edu/" target="_blank">
+          <img className="imgStyle" src={Penn} alt="Colleges" />
+        </Link>
+        <Link to="https://umich.edu/" target="_blank">
+          <img className="imgStyle" src={Umich} alt="Colleges" />
+        </Link>
+        <Link to="https://duke.edu/" target="_blank">
+          <img className="imgStyle" src={Duke} alt="Colleges" />
+        </Link>
+        <Link to="https://www.stanford.edu/" target="_blank">
+          <img className="imgStyle" src={Stanford} alt="Colleges" />
+        </Link>
       </div>
     </div>
   );

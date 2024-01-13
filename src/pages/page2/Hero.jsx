@@ -384,13 +384,13 @@ const Hero = () => {
           <BusinsCard2 content={content} />
         </div>
       ))}
-      <div className="flex items-center justify-center gap-20 py-20 flex-col bg-gray-100">
+      <div className="flexStyle gap-20 py-20 flex-col bg-gray-100">
         <div className="text-center">
           <h1 className="font-bold text-4xl">
             Search our catalog of world-class content
           </h1>
         </div>
-        <div className="flex flex-col items-center justify-center gap-4 px-4">
+        <div className="flexStyle flex-col gap-4 px-4">
           <input
             type="text"
             placeholder="e.g.Data Science"

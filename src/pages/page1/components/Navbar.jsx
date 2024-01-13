@@ -101,16 +101,13 @@ const Navbar = () => {
             <p>Online Degrees</p>
             <p>Find Your New Career</p>
             {userName ? (
-              <div className="flex items-center justify-center space-x-2">
+              <div className="flexStyle space-x-2">
                 <img
                   src={userPhoto}
                   alt="user"
                   className="h-10 w-10 rounded-full object-cover mr-2 cursor-pointer"
                 />
-                <button
-                  className="p-2 rounded-md border-2 border-blue-700 text-blue-700 font-semibold"
-                  onClick={handleAuth}
-                >
+                <button className="logOut" onClick={handleAuth}>
                   Log Out
                 </button>
               </div>
@@ -151,26 +148,16 @@ const Navbar = () => {
                         alt="user"
                         className="h-10 w-10 rounded-full object-cover mr-2 cursor-pointer"
                       />
-                      <button
-                        className="p-2 rounded-md border-2 border-blue-700 text-blue-700 font-semibold"
-                        onClick={handleAuth}
-                      >
+                      <button className="logOut" onClick={handleAuth}>
                         Log Out
                       </button>
                     </div>
                   </li>
-                  <ul className="border-b-2 p-2 py-4 flex  items-start flex-col justify-center space-y-6">
+                  <ul className="ulStyle">
                     <li>Your account</li>
-                    <li>For Universities</li>
-                    <li>For Enterprise</li>
                     <li>Help Center</li>
                   </ul>
-                </ul>
-              </div>
-            ) : (
-              <div>
-                <ul className="py-2 overflow-scroll h-[76vh]">
-                  <ul className="border-b-2 p-4 flex  items-start flex-col justify-center space-y-6">
+                  <ul className="ulStyle">
                     <li>
                       <Link to="/">For Individuals</Link>
                     </li>
@@ -184,13 +171,32 @@ const Navbar = () => {
                       <Link to="/page4">For Goverments</Link>
                     </li>
                   </ul>
-                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                </ul>
+              </div>
+            ) : (
+              <div>
+                <ul className="py-2 overflow-scroll h-[76vh]">
+                  <ul className="ulStyle">
+                    <li>
+                      <Link to="/">For Individuals</Link>
+                    </li>
+                    <li>
+                      <Link to="/page2">For Business</Link>
+                    </li>
+                    <li>
+                      <Link to="/page3">For Universities</Link>
+                    </li>
+                    <li>
+                      <Link to="/page4">For Goverments</Link>
+                    </li>
+                  </ul>
+                  <ul className="ulStyle">
                     <li className="font-bold ">Goals</li>
                     <li>Take a free course</li>
                     <li>Earn a Degree</li>
                     <li>Earn a Certificate</li>
                   </ul>
-                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                  <ul className="ulStyle">
                     <li className="font-bold">Subjects</li>
                     <li>Data Science</li>
                     <li>Business</li>
@@ -204,7 +210,7 @@ const Navbar = () => {
                     <li>Arts and Humanities</li>
                     <li>Math and Logic</li>
                   </ul>
-                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                  <ul className="ulStyle">
                     <li>Browse all subjects</li>
                   </ul>
                 </ul>

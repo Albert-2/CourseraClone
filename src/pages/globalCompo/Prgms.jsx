@@ -27,7 +27,7 @@ const Prgms = (props) => {
             Earn a degree
           </p>
         ) : (
-          <div className="inline-flex items-center justify-center space-x-2">
+          <div className="inline-flexStyle space-x-2">
             <h1>
               <span className="font-bold">{props.detail.rating}</span>
             </h1>

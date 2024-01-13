@@ -47,14 +47,14 @@ const CareerModal = (props) => {
           <h1 className="font-bold text-xl  w-full">
             Recommended Professional Certificates
           </h1>
-          <div className="flex md:flex-row flex-col  items-center justify-center gap-4">
+          <div className="flexStyle md:flex-row flex-col gap-4">
             {props.info.courses.map((course, courseIndex) => (
               <ProfCertf course={course} key={courseIndex} />
             ))}
           </div>
         </div>
       </div>
-      <div className=" 2xl:hidden flex  items-center justify-center md:flex-row flex-col md:text-left text-center gap-4 py-6 ">
+      <div className=" 2xl:hidden flexStyle md:flex-row flex-col md:text-left text-center gap-4 py-6 ">
         <img
           src={props.info.userIcon}
           alt="feedback"

@@ -63,20 +63,6 @@ const GlobHero = (props) => {
           </div>
         </div>
       </div>
-      {/* <div
-        className="container max-w-[90%] mx-auto flex items-stretch justify-center sm:flex-row flex-col rounded-lg bg-black absolute top-[95%] text-white font-bold sm:py-10 py-0 px-4 sm:divide-x divide-x-0 sm:divide-y-0 divide-y"
-        style={{
-          left: "50%",
-          transform: "translate(-50%, 0)",
-        }}
-      >
-        {props.heroInfo.footContainer.map((info, infoIndex) => (
-          <div className="flex justify-start items-center gap-2 sm:py-2 py-10 flex-1 px-6 " key={infoIndex}>
-            <h1 className="text-3xl">{info.head}</h1>
-            <p>{info.subHead}</p>
-          </div>
-        ))}
-      </div> */}
     </div>
   );
 };

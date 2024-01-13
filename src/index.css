@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .ulStyle {
+    @apply border-b-2 p-2 py-4 flex  items-start flex-col justify-center space-y-6;
+  }
+  .logOut {
+    @apply p-2 rounded-md border-2 border-blue-700 text-blue-700 font-semibold;
+  }
+  .linkStyle {
+    @apply text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent;
+  }
+  .imgStyle {
+    @apply sm:max-w-[100px] max-w-[75px];
+  }
+  .flexStyle {
+    @apply flex items-center justify-center;
+  }
+}

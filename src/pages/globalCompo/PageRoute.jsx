@@ -12,7 +12,7 @@ const PageRoute = () => {
       <div className="bg-black border-2 border-white  items-center justify-stretch space-x-4 lg:flex hidden px-4">
         <Link
           to="/"
-          className={`text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent ${
+          className={`linkStyle ${
             isLinkActive("/") ? "border-b-4 border-white" : ""
           }`}
         >
@@ -20,7 +20,7 @@ const PageRoute = () => {
         </Link>
         <Link
           to="/page2"
-          className={`text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent ${
+          className={`linkStyle ${
             isLinkActive("/page2") ? "border-b-4 border-white" : ""
           }`}
         >
@@ -28,7 +28,7 @@ const PageRoute = () => {
         </Link>
         <Link
           to="/page3"
-          className={`text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent ${
+          className={`linkStyle ${
             isLinkActive("/page3") ? "border-b-4 border-white" : ""
           }`}
         >
@@ -36,7 +36,7 @@ const PageRoute = () => {
         </Link>
         <Link
           to="/page4"
-          className={`text-white hover:bg-white hover:text-black py-4 px-2 bg-transparent ${
+          className={`linkStyle ${
             isLinkActive("/page4") ? "border-b-4 border-white" : ""
           }`}
         >

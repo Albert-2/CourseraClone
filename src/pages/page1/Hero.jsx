@@ -935,7 +935,7 @@ const Hero = () => {
     <>
       <PageRoute />
       <Navbar />
-      <div className="flex items-center justify-center container m-auto py-8 px-4">
+      <div className="flexStyle container m-auto py-8 px-4">
         <div className="flex-1 flex md:text-left text-center justify-center md:items-start flex-col space-y-10 md:max-w-max max-w-sm">
           <h1 className="font-bold md:text-8xl text-6xl">
             Learn without limits
@@ -1011,7 +1011,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="sm:py-40 py-20">
-        <div className="bg-blue-100 xl:h-[600px] h-fit flex items-center justify-center xl:flex-row flex-col gap-6 sm:px-24 px-4 ">
+        <div className="bg-blue-100 xl:h-[600px] h-fit flexStyle xl:flex-row flex-col gap-6 sm:px-24 px-4 ">
           <img
             src={ThreeImg}
             alt="images"
@@ -1035,7 +1035,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="container m-auto py-10 flex items-center justify-center flex-col space-y-6 text-center">
+      <div className="container m-auto py-10 flexStyle flex-col space-y-6 text-center">
         <div className="flex items-center space-y-4 flex-col">
           <h1 className="font-semibold text-4xl ">
             From the Coursera community
