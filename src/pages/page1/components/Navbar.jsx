@@ -1,9 +1,59 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.svg";
 import { Link } from "react-router-dom";
+import { auth, googleAuthProvider } from "../../../firebase";
+import { signInWithPopup, signOut } from "firebase/auth";
+import { useSelector, useDispatch } from "react-redux";
 
+import {
+  selectUserName,
+  selectUserPhoto,
+  setUserLogInDetails,
+  setSignOutState,
+} from "../../../features/user/userSlice";
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
+  const dispatch = useDispatch();
+  const userName = useSelector(selectUserName);
+  const userPhoto = useSelector(selectUserPhoto);
+  useEffect(() => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user) {
+        setUser(user);
+      }
+    });
+  }, [userName]);
+
+  const handleAuth = () => {
+    if (!userName) {
+      setHidden(!hidden);
+      signInWithPopup(auth, googleAuthProvider)
+        .then((result) => {
+          setUser(result.user);
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    } else if (userName) {
+      signOut(auth)
+        .then(() => {
+          dispatch(setSignOutState());
+        })
+        .catch((error) => {
+          console.log(error.message);
+        });
+    }
+  };
+  const setUser = (user) => {
+    dispatch(
+      setUserLogInDetails({
+        name: user.displayName,
+        email: user.email,
+        photo: user.photoURL,
+      })
+    );
+  };
+
   return (
     <div className="  sticky top-0 bg-white py-2 text-sm">
       <div className="  lg:block hidden">
@@ -50,10 +100,30 @@ const Navbar = () => {
           <div className="flex items-center justify-between space-x-6">
             <p>Online Degrees</p>
             <p>Find Your New Career</p>
-            <p className="text-blue-700 cursor-pointer">Log In</p>
-            <button className="text-white bg-blue-700 rounded-md py-2 px-4 font-semibold">
-              Join for Free
-            </button>
+            {userName ? (
+              <div className="flex items-center justify-center space-x-2">
+                <img
+                  src={userPhoto}
+                  alt="user"
+                  className="h-10 w-10 rounded-full object-cover mr-2 cursor-pointer"
+                />
+                <button
+                  className="p-2 rounded-md border-2 border-blue-700 text-blue-700 font-semibold"
+                  onClick={handleAuth}
+                >
+                  Log Out
+                </button>
+              </div>
+            ) : (
+              <div className="flex gap-5 items-center justify-between">
+                <p className="text-blue-700 cursor-pointer">
+                  <button onClick={handleAuth}>Log In</button>
+                </p>
+                <button className="text-white bg-blue-700 rounded-md py-2 px-4 font-semibold">
+                  Join for Free
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -71,53 +141,86 @@ const Navbar = () => {
         </div>
         {hidden && (
           <div className="absolute top-full bg-white z-10 w-full flex items-stretch justify-center flex-col">
-            <ul className="overflow-scroll h-[76vh]  ">
-              <ul className="border-b-2 p-4 flex  items-start flex-col justify-center space-y-6">
-                <li>
-                  <Link to="/">For Individuals</Link>
-                </li>
-                <li>
-                  <Link to="/page2">For Business</Link>
-                </li>
-                <li>
-                  <Link to="/page3">For Universities</Link>
-                </li>
-                <li>
-                  <Link to="/page4">For Goverments</Link>
-                </li>
-              </ul>
-              <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-                <li className="font-bold ">Goals</li>
-                <li>Take a free course</li>
-                <li>Earn a Degree</li>
-                <li>Earn a Certificate</li>
-              </ul>
-              <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-                <li className="font-bold">Subjects</li>
-                <li>Data Science</li>
-                <li>Business</li>
-                <li>Computer Science</li>
-                <li>Information Technology</li>
-                <li>Language Learning</li>
-                <li>Health</li>
-                <li>Personal Development</li>
-                <li>Physical Science and Engineering</li>
-                <li>Social Sciences</li>
-                <li>Arts and Humanities</li>
-                <li>Math and Logic</li>
-              </ul>
-              <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
-                <li>Browse all subjects</li>
-              </ul>
-            </ul>
-            <ul className="flex flex-col justify-center px-4  sm:space-y-4 space-y-2 flex-1">
-              <button className="flex-1 sm:p-4 p-3 text-white bg-blue-700 font-semibold">
-                Join for free
-              </button>
-              <button className="flex-1 sm:p-4 p-3 border-2 border-blue-700 text-blue-700 font-semibold">
-                Log In
-              </button>
-            </ul>
+            {userName ? (
+              <div>
+                <ul className="p-2 space-y-4 overflow-scroll h-[100vh]">
+                  <li className="border-b-2 p-2 py-4">
+                    <div className="flex items-center justify-start space-x-4">
+                      <img
+                        src={userPhoto}
+                        alt="user"
+                        className="h-10 w-10 rounded-full object-cover mr-2 cursor-pointer"
+                      />
+                      <button
+                        className="p-2 rounded-md border-2 border-blue-700 text-blue-700 font-semibold"
+                        onClick={handleAuth}
+                      >
+                        Log Out
+                      </button>
+                    </div>
+                  </li>
+                  <ul className="border-b-2 p-2 py-4 flex  items-start flex-col justify-center space-y-6">
+                    <li>Your account</li>
+                    <li>For Universities</li>
+                    <li>For Enterprise</li>
+                    <li>Help Center</li>
+                  </ul>
+                </ul>
+              </div>
+            ) : (
+              <div>
+                <ul className="py-2 overflow-scroll h-[76vh]">
+                  <ul className="border-b-2 p-4 flex  items-start flex-col justify-center space-y-6">
+                    <li>
+                      <Link to="/">For Individuals</Link>
+                    </li>
+                    <li>
+                      <Link to="/page2">For Business</Link>
+                    </li>
+                    <li>
+                      <Link to="/page3">For Universities</Link>
+                    </li>
+                    <li>
+                      <Link to="/page4">For Goverments</Link>
+                    </li>
+                  </ul>
+                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                    <li className="font-bold ">Goals</li>
+                    <li>Take a free course</li>
+                    <li>Earn a Degree</li>
+                    <li>Earn a Certificate</li>
+                  </ul>
+                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                    <li className="font-bold">Subjects</li>
+                    <li>Data Science</li>
+                    <li>Business</li>
+                    <li>Computer Science</li>
+                    <li>Information Technology</li>
+                    <li>Language Learning</li>
+                    <li>Health</li>
+                    <li>Personal Development</li>
+                    <li>Physical Science and Engineering</li>
+                    <li>Social Sciences</li>
+                    <li>Arts and Humanities</li>
+                    <li>Math and Logic</li>
+                  </ul>
+                  <ul className="border-b-2 p-4 flex items-start flex-col justify-center space-y-6">
+                    <li>Browse all subjects</li>
+                  </ul>
+                </ul>
+                <ul className="flex flex-col justify-center px-4  sm:space-y-4 space-y-2 flex-1">
+                  <button className="flex-1 sm:p-4 p-3 text-white bg-blue-700 font-semibold">
+                    Join for free
+                  </button>
+                  <button
+                    className="flex-1 sm:p-4 p-3 border-2 border-blue-700 text-blue-700 font-semibold"
+                    onClick={handleAuth}
+                  >
+                    Log In
+                  </button>
+                </ul>
+              </div>
+            )}
           </div>
         )}
       </div>
